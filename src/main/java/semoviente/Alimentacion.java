@@ -6,6 +6,8 @@ import semoviente.values.Delta;
 import semoviente.values.Tipo;
 import semoviente.values.Total;
 
+import java.util.Objects;
+
 public class Alimentacion extends Entity<AlimentacionId> {
 
     private final Tipo tipo;
@@ -14,6 +16,12 @@ public class Alimentacion extends Entity<AlimentacionId> {
     public Alimentacion(AlimentacionId entityId, Tipo tipo) {
         super(entityId);
         this.tipo = tipo;
+        this.total= new Total(0);
+    }
+
+    public void alimentar(Delta delta){
+        this.delta = Objects.requireNonNull(delta);
+        this.total = total.actualizarTotal(Objects.requireNonNull(delta));
     }
 
     public Tipo tipo() {

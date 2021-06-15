@@ -3,6 +3,8 @@ package semoviente;
 import co.com.sofka.domain.generic.Entity;
 import semoviente.values.*;
 
+import java.util.Objects;
+
 public class FichaTecnica extends Entity<FichaTecnicaId> {
     private final Especie especie;
     private final Raza raza;
@@ -20,6 +22,14 @@ public class FichaTecnica extends Entity<FichaTecnicaId> {
         this.sexo = sexo;
         this.color = color;
         this.peso = peso;
+    }
+
+    public void cumplirAnios(Edad edad){
+        this.edad=Objects.requireNonNull(edad);
+    }
+
+    public void rectificarPeso(Peso peso){
+        this.peso = Objects.requireNonNull(peso);
     }
 
     public Especie especie(){

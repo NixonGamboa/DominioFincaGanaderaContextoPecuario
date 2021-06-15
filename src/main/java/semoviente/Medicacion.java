@@ -15,6 +15,10 @@ public class Medicacion extends Entity<MedicacionId> {
         super(entityId);
         this.tratamiento = tratamiento;
         this.medicamento = medicamento;
+        this.avance = new Avance(0);
+    }
+    public void suministrarDroga(){
+        this.avance= avance.avanzarTratamiento(this.medicamento);
     }
 
     public Tratamiento tratamiento() {
