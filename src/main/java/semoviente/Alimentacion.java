@@ -15,4 +15,16 @@ public class Alimentacion extends Entity<AlimentacionId> {
         super(entityId);
         this.tipo = tipo;
     }
+
+    public Tipo tipo() {
+        return tipo;
+    }
+
+    public Delta delta() {
+        return delta;
+    }
+
+    public Total total() {
+        return total;
+    }
 }

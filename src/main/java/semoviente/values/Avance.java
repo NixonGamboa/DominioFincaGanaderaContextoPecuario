@@ -2,9 +2,9 @@ package semoviente.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class Avance implements ValueObject<String> {
+public class Avance implements ValueObject<Integer> {
     @Override
-    public String value() {
+    public Integer value() {
         return null;
     }
 }

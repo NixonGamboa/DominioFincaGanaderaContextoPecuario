@@ -22,8 +22,27 @@ public class FichaTecnica extends Entity<FichaTecnicaId> {
         this.peso = peso;
     }
 
-
-    public Especie getEspecie(){
+    public Especie especie(){
         return especie;
+    }
+
+    public Raza raza() {
+        return raza;
+    }
+
+    public Sexo sexo() {
+        return sexo;
+    }
+
+    public Color color() {
+        return color;
+    }
+
+    public Edad edad() {
+        return edad;
+    }
+
+    public Peso peso() {
+        return peso;
     }
 }

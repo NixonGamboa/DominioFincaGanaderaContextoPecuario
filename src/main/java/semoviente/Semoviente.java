@@ -15,6 +15,8 @@ public class Semoviente extends AggregateEvent<SemovienteId> {
     public Semoviente(SemovienteId entityId, FichaTecnica fichaTecnica) {
         super(entityId);
         this.fichaTecnica = fichaTecnica;
-        appendChange(new SemovienteCreado(fichaTecnica.getEspecie())).apply();
+        appendChange(new SemovienteCreado(fichaTecnica)).apply();
     }
+
+
 }

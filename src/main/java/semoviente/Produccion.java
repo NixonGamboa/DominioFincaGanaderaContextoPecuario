@@ -15,4 +15,16 @@ public class Produccion extends Entity<ProduccionId> {
         super(entityId);
         this.peso = peso;
     }
+
+    public Peso peso() {
+        return peso;
+    }
+
+    public Rendimiento rendimiento() {
+        return rendimiento;
+    }
+
+    public Etapa etapa() {
+        return etapa;
+    }
 }

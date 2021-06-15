@@ -16,4 +16,16 @@ public class Medicacion extends Entity<MedicacionId> {
         this.tratamiento = tratamiento;
         this.medicamento = medicamento;
     }
+
+    public Tratamiento tratamiento() {
+        return tratamiento;
+    }
+
+    public Medicamento medicamento() {
+        return medicamento;
+    }
+
+    public Avance avance() {
+        return avance;
+    }
 }
